@@ -1,20 +1,20 @@
 ﻿# Build Orchestrator
 
-Build Orchestrator is a Unity tooling package for profile-driven builds:
-- version bumping
-- define symbols management
-- build name templating
-- build execution
-- post-build cleanup and zip packaging
-- custom build actions with pipeline stages
+Build Orchestrator — пакет инструментов для Unity с профилями сборки:
+- автоувеличение версии
+- управление define symbols
+- шаблоны именования сборок
+- запуск сборки
+- постобработка и упаковка в zip
+- кастомные действия по стадиям пайплайна
 
-## Unity Compatibility
+## Совместимость с Unity
 
-- Unity: `2022.3` or newer in the same LTS line
+- Unity: `2022.3` и новее в рамках той же LTS-линейки
 
-## Installation (Git URL)
+## Установка (Git URL)
 
-Add the dependency to your project's `Packages/manifest.json`:
+Добавьте зависимость в `Packages/manifest.json` проекта:
 
 ```json
 {
@@ -24,33 +24,33 @@ Add the dependency to your project's `Packages/manifest.json`:
 }
 ```
 
-## First Setup
+## Первый запуск
 
-1. Open `Window/Package Manager`.
-2. Select `Build Orchestrator`.
-3. In `Samples`, import `Default BuildPipeline Config`.
-4. Open menu `Tools/Build/Build Pipeline Manager`.
-5. Review imported `BuildPipelineConfig.asset` and adjust profiles/flags.
+1. Откройте `Window/Package Manager`.
+2. Выберите `Build Orchestrator`.
+3. В разделе `Samples` импортируйте `Default BuildPipeline Config`.
+4. Откройте меню `Tools/Build/Build Pipeline Manager`.
+5. Проверьте импортированный `BuildPipelineConfig.asset` и настройте профили/флаги.
 
-## Menus
+## Меню
 
 - `Tools/Build/Build Pipeline Manager`
 - `File/Build Profiles/Build Pipeline Manager`
 - `Tools/Build/Create Build Pipeline Config`
 - `File/Build Profiles/Create Build Pipeline Config`
 
-## Notes
+## Примечания
 
-- The package creates new config assets under `Assets/BuildPipeline/Config`.
-- Define symbols are persisted in `PlayerSettings`.
-- Dev version overlay appears only when `TL_BUILD_DEV` or `BUILD_DEV` is defined.
+- Пакет создает новые конфиг-ассеты в `Assets/BuildPipeline/Config`.
+- Define symbols сохраняются в `PlayerSettings`.
+- Dev-оверлей версии появляется только при `TL_BUILD_DEV` или `BUILD_DEV`.
 
-## Package Layout
+## Структура пакета
 
-- `Editor/` editor tooling and build pipeline services
-- `Runtime/` runtime components
-- `Samples~/DefaultConfig/` starter config sample
+- `Editor/` инструменты редактора и сервисы пайплайна сборки
+- `Runtime/` runtime-компоненты
+- `Samples~/DefaultConfig/` стартовый sample-конфиг
 
-## License
+## Лицензия
 
-MIT. See `LICENSE.md`.
+MIT. См. `LICENSE.md`.
