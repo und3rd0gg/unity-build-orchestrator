@@ -1,0 +1,43 @@
+﻿{
+  "name": "com.underdogg.build-orchestrator",
+  "version": "0.1.0",
+  "displayName": "Build Orchestrator",
+  "description": "Configurable Unity build pipeline manager with profiles, flags, version bumping, define symbols, packaging, and post-build actions.",
+  "unity": "2022.3",
+  "unityRelease": "0f1",
+  "documentationUrl": "https://github.com/und3rd0gg/unity-build-orchestrator#readme",
+  "changelogUrl": "https://github.com/und3rd0gg/unity-build-orchestrator/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/und3rd0gg/unity-build-orchestrator/blob/main/LICENSE.md",
+  "dependencies": {
+    "com.unity.textmeshpro": "3.0.6",
+    "com.unity.ugui": "1.0.0"
+  },
+  "keywords": [
+    "build",
+    "pipeline",
+    "orchestrator",
+    "automation",
+    "versioning",
+    "defines",
+    "packaging",
+    "editor-tools"
+  ],
+  "author": {
+    "name": "underdogg",
+    "email": "microelement@icloud.com",
+    "url": "https://github.com/und3rd0gg"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/und3rd0gg/unity-build-orchestrator.git"
+  },
+  "type": "tool",
+  "hideInEditor": false,
+  "samples": [
+    {
+      "displayName": "Default BuildPipeline Config",
+      "description": "Starter BuildPipelineConfig asset and setup notes.",
+      "path": "Samples~/DefaultConfig"
+    }
+  ]
+}

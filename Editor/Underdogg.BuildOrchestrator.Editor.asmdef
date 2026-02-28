@@ -1,0 +1,18 @@
+﻿{
+  "name": "Underdogg.BuildOrchestrator.Editor",
+  "rootNamespace": "BuildOrchestrator.Editor",
+  "references": [
+    "Underdogg.BuildOrchestrator.Runtime"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": false
+}

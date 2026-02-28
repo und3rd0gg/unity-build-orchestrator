@@ -1,0 +1,176 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 109f229cf9c04c147963802c91011e43, type: 3}
+  m_Name: BuildPipelineConfig
+  m_EditorClassIdentifier: Assembly-CSharp-Editor::BuildOrchestrator.Editor.BuildPipelineConfig
+  _outputRootFolderName: BUILD
+  _enablePreprocessVersioning: 1
+  _enablePreprocessDefines: 1
+  _preprocessProfileId: dev
+  _lastSelectedProfileId: release_demo
+  _profiles:
+  - _id: dev
+    _displayName: Dev
+    _target: 19
+    _nameTemplate: '{product}_{version}'
+    _incrementVersion: 1
+    _versionMode: 1
+    _applyDefines: 1
+    _defineSymbols:
+    - TL_BUILD_DEV
+    _zipAfterBuild: 1
+    _removeDoNotShipDirectories: 1
+    _doNotShipDirectoryNames:
+    - do not ship
+    - BurstDebugInformation_DoNotShip
+    _unityBuildOptions: 0
+    _availableFlagIds:
+    - demo-content
+    - skip-zip
+    - skip-version-bump
+    _actions: []
+  - _id: review_demo
+    _displayName: Review + Demo
+    _target: 19
+    _nameTemplate: '{product}_demo_review'
+    _incrementVersion: 1
+    _versionMode: 1
+    _applyDefines: 1
+    _defineSymbols:
+    - TL_BUILD_REVIEW
+    - TL_BUILD_DEMO
+    _zipAfterBuild: 1
+    _removeDoNotShipDirectories: 1
+    _doNotShipDirectoryNames:
+    - do not ship
+    - BurstDebugInformation_DoNotShip
+    _unityBuildOptions: 0
+    _availableFlagIds:
+    - demo-content
+    - skip-zip
+    - skip-version-bump
+    _actions: []
+  - _id: release_demo
+    _displayName: Release + Demo
+    _target: 19
+    _nameTemplate: '{product}_demo_release'
+    _incrementVersion: 1
+    _versionMode: 1
+    _applyDefines: 1
+    _defineSymbols:
+    - TL_BUILD_RELEASE
+    - TL_BUILD_DEMO
+    _zipAfterBuild: 1
+    _removeDoNotShipDirectories: 1
+    _doNotShipDirectoryNames:
+    - do not ship
+    - BurstDebugInformation_DoNotShip
+    _unityBuildOptions: 0
+    _availableFlagIds:
+    - demo-content
+    - skip-zip
+    - skip-version-bump
+    _actions: []
+  - _id: review
+    _displayName: Review
+    _target: 19
+    _nameTemplate: '{product}_review'
+    _incrementVersion: 1
+    _versionMode: 1
+    _applyDefines: 1
+    _defineSymbols:
+    - TL_BUILD_REVIEW
+    _zipAfterBuild: 1
+    _removeDoNotShipDirectories: 1
+    _doNotShipDirectoryNames:
+    - do not ship
+    - BurstDebugInformation_DoNotShip
+    _unityBuildOptions: 0
+    _availableFlagIds:
+    - demo-content
+    - skip-zip
+    - skip-version-bump
+    _actions: []
+  - _id: release
+    _displayName: Release
+    _target: 19
+    _nameTemplate: '{product}_release'
+    _incrementVersion: 1
+    _versionMode: 1
+    _applyDefines: 1
+    _defineSymbols:
+    - TL_BUILD_RELEASE
+    _zipAfterBuild: 1
+    _removeDoNotShipDirectories: 1
+    _doNotShipDirectoryNames:
+    - do not ship
+    - BurstDebugInformation_DoNotShip
+    _unityBuildOptions: 0
+    _availableFlagIds:
+    - demo-content
+    - skip-zip
+    - skip-version-bump
+    _actions: []
+  _optionFlags:
+  - _id: demo-content
+    _label: Demo Content
+    _description: "\u0414\u043E\u0431\u0430\u0432\u043B\u044F\u0435\u0442 define
+      TL_BUILD_DEMO \u043A \u0432\u044B\u0431\u0440\u0430\u043D\u043D\u043E\u043C\u0443
+      \u043F\u0440\u043E\u0444\u0438\u043B\u044E \u0432\u043E \u0432\u0440\u0435\u043C\u044F
+      \u0441\u0431\u043E\u0440\u043A\u0438."
+    _defaultEnabled: 0
+    _defineSymbolsWhenEnabled:
+    - TL_BUILD_DEMO
+    _overrideIncrementVersion: 0
+    _incrementVersionValue: 1
+    _overrideApplyDefines: 0
+    _applyDefinesValue: 1
+    _overrideZipAfterBuild: 0
+    _zipAfterBuildValue: 1
+    _overrideRemoveDoNotShip: 0
+    _removeDoNotShipValue: 1
+  - _id: skip-zip
+    _label: Skip Zip
+    _description: "\u041E\u0442\u043A\u043B\u044E\u0447\u0430\u0435\u0442 \u0443\u043F\u0430\u043A\u043E\u0432\u043A\u0443
+      \u0432 zip \u0434\u043B\u044F \u043A\u043E\u043D\u043A\u0440\u0435\u0442\u043D\u043E\u0433\u043E
+      \u0437\u0430\u043F\u0443\u0441\u043A\u0430."
+    _defaultEnabled: 0
+    _defineSymbolsWhenEnabled: []
+    _overrideIncrementVersion: 0
+    _incrementVersionValue: 1
+    _overrideApplyDefines: 0
+    _applyDefinesValue: 1
+    _overrideZipAfterBuild: 1
+    _zipAfterBuildValue: 0
+    _overrideRemoveDoNotShip: 0
+    _removeDoNotShipValue: 1
+  - _id: skip-version-bump
+    _label: Skip Version Bump
+    _description: "\u041D\u0435 \u0443\u0432\u0435\u043B\u0438\u0447\u0438\u0432\u0430\u0442\u044C
+      \u0432\u0435\u0440\u0441\u0438\u044E \u0432 \u044D\u0442\u043E\u043C \u0437\u0430\u043F\u0443\u0441\u043A\u0435."
+    _defaultEnabled: 0
+    _defineSymbolsWhenEnabled: []
+    _overrideIncrementVersion: 1
+    _incrementVersionValue: 0
+    _overrideApplyDefines: 0
+    _applyDefinesValue: 1
+    _overrideZipAfterBuild: 0
+    _zipAfterBuildValue: 1
+    _overrideRemoveDoNotShip: 0
+    _removeDoNotShipValue: 1
+  _globalActions:
+  - _enabled: 1
+    _actionId: log-context
+    _stage: 4
+  - _enabled: 1
+    _actionId: log-context
+    _stage: 5
